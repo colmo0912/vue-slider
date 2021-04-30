@@ -1,0 +1,56 @@
+.container {
+
+    background-color: red;
+    width: 700px;
+    height: 450px;
+
+}
+
+.container::after {
+
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.left_arrow, .central,.right_arrow {
+
+    float: left;
+    height: 100%;
+}
+
+.left_arrow,.right_arrow{
+
+    width: 10%;
+    background-color: aquamarine;
+}
+
+.central {
+
+    width: 80%;
+    background-color: rgb(182, 127, 255);
+    position: relative;
+}
+
+.central .dots_container {
+
+    width: 200px;
+    height: 40px;
+    background-color: burlywood;
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot_image {
+
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: darksalmon;
+    margin: 0 10px;
+}
