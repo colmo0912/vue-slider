@@ -16,7 +16,33 @@ const slider = new Vue({
 
 
     methods:{
+        cliccaSinistra:function(){
 
+            if(this.itemImg=== this.itemImg[0]){
+
+                this.itemImg=this.itemImg[2]
+            }else if(this.itemImg=== this.itemImg[2]){
+
+                this.itemImg=this.itemImg[1]
+            }else if(this.itemImg=== this.itemImg[1]){
+
+                this.itemImg=this.itemImg[0]
+            }
+        },
+
+        cliccaDestra:function(){
+
+            if(this.itemImg===this.itemImg[0]){
+
+                this.itemImg=this.itemImg[1]
+            }else if(this.itemImg=== this.itemImg[1]){
+
+                this.itemImg=this.itemImg[2]
+            }else if(this.itemImg=== this.itemImg[2]){
+
+                this.itemImg=this.itemImg[0]
+            }
+        }
 
     }
 
