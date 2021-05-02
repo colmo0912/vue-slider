@@ -13,19 +13,21 @@
 
 <div id="app" class="app">
 
-    <div class="left_arrow">
+    <div class="left_arrow" @click="cliccaSinistra">
 
-        <i class="fas fa-chevron-left"></i>
+        <i class="fas fa-chevron-left" @click="index--"></i>
 
     </div>
     <div class="central">
-    
-        <img :src="itemImg"  alt="">
-        
 
+    
+        <img :src="itemImg[index]"  alt="">
+        <!-- <img :src="itemImg[index]"  alt="">
+        <img :src="itemImg[index]"  alt=""> -->
         
 
         <div class="dots_container">
+            
 
             <div class="dot_image" v-for= "immagini in itemImg">
                 
@@ -34,9 +36,9 @@
         </div>
 
     </div>
-    <div class="right_arrow">
+    <div class="right_arrow" @click="cliccaDestra">
 
-        <i class="fas fa-chevron-right"></i>
+        <i class="fas fa-chevron-right" @click="index++"></i>
 
     </div>
 
